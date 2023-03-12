@@ -1,0 +1,146 @@
+.modal{
+    display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(33, 33, 33, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 10
+}
+
+
+.modal__content{
+    display: flex;
+    position: relative;
+    padding: 20px 0px 20px 20px;
+    background-color: #fff;
+    max-width: 80vw;
+    height: 550px;
+    border-radius: 10px;
+    font-size: 36px;
+}
+
+.left_column{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 100%;
+}
+.right_column{
+    display: flex;
+    flex-direction: column;
+    padding:  0 10px;
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+}
+.poster{
+    height: 100%;
+    max-width: 100%;
+    object-position: center;
+    
+    &__wrapper{
+        margin: auto;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+}
+.title{
+    text-align: center;
+}
+.width{
+    width: 100% !important;
+}
+.details{
+    margin-top: 30px;
+    list-style: none;
+    font-size: 24px;
+    color:#333333;
+    padding-left: 0;
+    li{
+        display: grid;
+        grid-template-columns: auto 70%;
+        width: 100%;
+        text-align: start;
+        line-height: 28px;
+    }
+
+    &__data{
+        width: 100%;
+        text-align: start;
+    }
+}
+
+.description{
+    margin-top: 30px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &__title{
+        font-size: 24px;
+    }
+    &__wrapText{
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+.button{
+    min-width: 150px;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 24px;
+    transition: 0.3s;
+    background-color: #333333;
+    color: #fff;
+    cursor: pointer;
+    &:hover{
+        color:#000;
+        background-color: #fff;
+    }
+}
+.close{
+    position: absolute;
+    top:0;
+    right: 5px;
+    color: #333333;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover{
+        color:#000
+    }
+}
+
+@media (max-width: 970px) {
+    .left_column{
+        display: none;
+    }
+    .right_column{
+        width: 100%;
+    }
+    .modal__content{
+        height: auto;
+    }
+    .description__wrapText{
+        -webkit-line-clamp: unset;
+    }
+}
+@media (max-width: 650px) {
+    .buttons{
+        flex-direction: column;
+    }
+    .button{
+        margin-bottom: 10px;
+    }
+}
+
