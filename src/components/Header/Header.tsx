@@ -1,10 +1,4 @@
-import { DocumentNode } from "graphql";
 import { useEffect, useState } from "react";
-import {
-  ALL_ANIME_ID_BY_DATE,
-  ALL_ANIME_ID_BY_POPULAR,
-  ALL_ANIME_ID_BY_TRENDS,
-} from "../../graphql/anime";
 import { favoriteStore, watchedStore } from "../../localForage/localForage";
 import cl from "./header.module.scss";
 
